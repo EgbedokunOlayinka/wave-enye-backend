@@ -8,9 +8,6 @@ const app = express();
 app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: false }));
 
-// morgan logging
-app.use(morgan("dev"));
-
 // default route
 app.get("/", async (req, res, next) => {
   res.send("Hello from express");
